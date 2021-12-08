@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Readex Pro', sans-serif;
+}
+header{
+    position: relative;
+    top: 0;
+    height: 80px;
+    left: 0;
+    width: 100%;
+
+}
+
+header h4{
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 2rem;
+}
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.myname-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fdbe13;
+}
+
+.myname{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.myname.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.myname.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+body{
+    
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+.container{
+    width: 90%;
+    max-width: 40%;
+    margin: 0 auto;
+    background-color: white ;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px #fdbe13;
+}
+
+.step{
+    display: none;
+}
+
+.step.active{
+    display: block;
+}
+
+.form-group{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-group input,select{
+    width: 100%;
+    border: 1.5px solid rgba(128, 128, 128, 0.418);
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+button.next-btn,button.previous-btn,button.submit-btn{
+    float: right;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: rgba(180, 220, 255);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+}
+
+button.previous-btn{
+    float: left;
+}
+
+button.submit-btn{
+    background-color: aquamarine;
+}
+.quiz{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.starColor{
+    color: red;
+}
+.txtArea{
+    width: 100%;
+}
+.headingOne{
+    margin-top: 15px;
+}
+.mainHeader{
+    text-align: center; 
+    color: #FDC129;
+}
+
+
