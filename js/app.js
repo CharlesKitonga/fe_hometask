@@ -1,7 +1,6 @@
 let intro = document.querySelector('.intro')
 let myname = document.querySelector('.myname-header')
 let mynameSpan = document.querySelectorAll('.myname')
-let secOne = document.querySelector('.secOne')
 
 window.addEventListener('DOMContentLoaded', ()=>{
     setTimeout(() => {
@@ -23,7 +22,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
         intro.style.top = '-100vh'
 
     }, 2300);
-    
 })
 
 
@@ -31,7 +29,7 @@ const steps = Array.from(document.querySelectorAll('form .step'))
 // console.log(steps)
 const nextBtn = document.querySelectorAll('form .next-btn')
 const prevBtn = document.querySelectorAll('form .previous-btn')
-const submitBtn = document.querySelectorAll('form .submit-btn')
+const inputTxt = document.querySelectorAll('form .inputText')
 const form =document.querySelectorAll('form')
 
 nextBtn.forEach (button=> {
@@ -44,7 +42,8 @@ prevBtn.forEach(button=> {
         nextStep('prev')
     })
 })
- 
+
+
 function nextStep(btn){
     let index = 0
     const active = document.querySelector('form .step.active')
@@ -52,16 +51,11 @@ function nextStep(btn){
     steps[index].classList.remove('active')
     if (btn === 'next') {
         index ++
-    }else if (btn === 'prev') {
+    }
+    else if (btn === 'prev') {
         index --
     }
     steps[index].classList.add('active')
     // console.log(index)
 }
-
-
-  
-
-
-
  

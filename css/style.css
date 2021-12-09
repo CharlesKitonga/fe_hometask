@@ -10,6 +10,7 @@ header{
     height: 80px;
     left: 0;
     width: 100%;
+    margin-top: 10px;
 
 }
 
@@ -36,7 +37,7 @@ header h4{
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fdbe13;
+    color: #EE7023;
 }
 
 .myname{
@@ -57,11 +58,7 @@ header h4{
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
-
-body{
-    
-}
-
+ 
 section{
     min-height: 100vh;
     width: 100%;
@@ -72,13 +69,13 @@ section{
 }
 
 .container{
-    width: 90%;
-    max-width: 40%;
+    width: 100%;
+    max-width: 90%;
     margin: 0 auto;
     background-color: white ;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 20px #fdbe13;
+    box-shadow: 0px 0px 20px #EE7023;
 }
 
 .step{
@@ -123,7 +120,7 @@ button.submit-btn{
 }
 .quiz{
     margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .starColor{
     color: red;
@@ -136,7 +133,53 @@ button.submit-btn{
 }
 .mainHeader{
     text-align: center; 
-    color: #FDC129;
+    color: #EE7023;
 }
-
+.taskHeader{
+    text-decoration: none; 
+    color: #EE7023;
+}
+#nameError {
+    display: none;
+    font-size: 0.8em;
+  }
+  
+  #nameError.visible {
+    display: block;
+  }
+  
+  input.invalid {
+    border-color: red;
+  }
+  .content-table{
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      min-height: 10vh;
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, blue0, 0.15);
+  }
+  .content-table thead tr{ 
+      text-align: left;
+      font-weight: bold;
+  }
+  .content-table th, .content-table td {
+      padding: 12px 15px;
+  }
+  .content-table tbody tr{
+      border-bottom: 1px solid lightgray;
+  }
+  .content-table tbody tr:nth-of-type(even){
+      background-color: #f3f3f3;
+  }
+  .content-table tbody tr:last-of-type{
+      border-bottom:  2px solid  #EE7023;
+      ;
+  }
+  .content-table tbody tr.active-row{
+      font-weight: bold;
+      color: #EE7023;
+  }
 

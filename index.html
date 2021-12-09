@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
     </head>
     <body> 
         <div class="intro">
@@ -19,17 +20,17 @@
             </h1>
         </div>
         <header>
-            <h4>Frontend Hometask</h4>
+            <h4> <a href="index.html" class="taskHeader">Frontend Hometask</a></h4>
         </header>
         <section>
             <div class="container">
                 <h1 class="mainHeader">APPLICATION FOR A HOUSING LOAN</h1> 
-                <form>
+                <form method="post" action="viewData.html" id="form">
                     <div class="step step-1 active">
                         <div class="form-group">
                             <label for="quextionOne"><strong>Question One</strong></label>
                             <p class="quiz">Purpose of the loan ? <span class="starColor">*</span></p>
-                            <textarea name="questionOne" id="questionOne"  class="txtArea" rows="10"></textarea>
+                            <textarea name="questionOne" id="questionOne"  class="txtArea" cols="5" rows="10"></textarea>
                         </div>
                         <button type="button" class="next-btn">Next</button>
                     </div>
@@ -37,10 +38,10 @@
                         <div class="form-group">
                             <label for="quextionTwo"><strong>Question Two</strong></label>
                             <p class="quiz"> Loan amount <span class="starColor">*</span></p>
-                            <input type="number" name="questionTwo" id="questionTwo" placeholder="Amount.." required>  
-                        </div>
+                            <input type="number" class="inputText" name="questionTwo" id="questionTwo" placeholder="Amount.." required>  
+                        </div> 
                         <button type="button" class="previous-btn">Prev</button>
-                        <button type="button" class="next-btn">Next</button>
+                        <button  type="button" class="stayPage next-btn" >Next</button>
 
                     </div>
                     <div class="step step-3 ">
@@ -99,7 +100,7 @@
                     <div class="step step-final">
                         <div class="form-group">
                             <label for="finalQuiz"><strong>Final Question</strong></label>
-                            <select name="martialStatus" id="martialStatus">
+                            <select name="maritalStatus" id="maritalStatus">
                                 <option value="">--Please choose an option--</option>
                                 <option value="single">Single</option>
                                 <option value="married">Married</option> 
@@ -107,12 +108,39 @@
                         </div>
 
                         <button type="button" class="previous-btn">Prev</button>
-                        <button type="submit" class="submit-btn">Submit</button>
+                        <button type="button" class="submit-btn" onclick="getData()">Save</button>
                     </div>
                 </form>
             </div>
         </section>
-
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
+        <!-- sweetaleart js-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script>
+            function getData(){                
+                var questionOne = document.getElementById("questionOne").value; 
+                var questionTwo = document.getElementById("questionTwo").value;
+                var questionThree = document.getElementById("questionThree").value;
+                var questionFour = document.getElementById("questionFour").value;
+                var questionFive = document.getElementById("questionFive").value;
+                var questionSix = document.getElementById("questionSix").value;
+                var number = document.getElementById("number").value;
+                var maritalStatus = document.getElementById("maritalStatus").value;
+
+                //saving the values in local storage
+                localStorage.setItem("questionOne", questionOne);
+                localStorage.setItem("questionTwo", questionTwo);
+                localStorage.setItem("questionThree", questionThree);
+                localStorage.setItem("questionFour", questionFour); 
+                localStorage.setItem("questionFive", questionFive); 
+                localStorage.setItem("questionSix", questionSix); 
+                localStorage.setItem("Telephone", number); 
+                localStorage.setItem("maritalStatus", maritalStatus); 
+
+                event.preventDefault();
+                window.location.href = "viewData.html"
+            }
+        </script>  
     </body>
 </html>
