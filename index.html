@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="js/validation.js"></script>
 
     </head>
     <body> 
@@ -25,14 +26,14 @@
         <section>
             <div class="container">
                 <h1 class="mainHeader">APPLICATION FOR A HOUSING LOAN</h1> 
-                <form method="post" action="viewData.html" id="form">
+                <form method="post" action="viewData.html" id="form" >
                     <div class="step step-1 active">
                         <div class="form-group">
                             <label for="quextionOne"><strong>Question One</strong></label>
                             <p class="quiz">Purpose of the loan ? <span class="starColor">*</span></p>
                             <textarea name="questionOne" id="questionOne"  class="txtArea" cols="5" rows="10"></textarea>
                         </div>
-                        <button type="button" class="next-btn">Next</button>
+                        <button type="button" class="next-btn" onclick=" quizOne()" >Next</button>
                     </div>
                     <div class="step step-2">
                         <div class="form-group">
@@ -41,7 +42,7 @@
                             <input type="number" class="inputText" name="questionTwo" id="questionTwo" placeholder="Amount.." required>  
                         </div> 
                         <button type="button" class="previous-btn">Prev</button>
-                        <button  type="button" class="stayPage next-btn" >Next</button>
+                        <button  type="button" class="stayPage next-btn" onclick=" quizTwo()" >Next</button>
 
                     </div>
                     <div class="step step-3 ">
@@ -52,7 +53,7 @@
                         </div>
 
                         <button type="button" class="previous-btn">Prev</button>
-                        <button type="button" class="next-btn">Next</button>
+                        <button type="button" class="next-btn" onclick=" quizThree()">Next</button>
                     </div>
                     <div class="step step-4">
                         <div class="form-group">
@@ -62,7 +63,7 @@
                         </div>
 
                         <button type="button" class="previous-btn">Prev</button>
-                        <button type="button" class="next-btn">Next</button>
+                        <button type="button" class="next-btn" onclick=" quizFour()">Next</button>
                     </div>
 
                     <div class="step step-5">
@@ -73,7 +74,7 @@
                         </div>
 
                         <button type="button" class="previous-btn">Prev</button>
-                        <button type="button" class="next-btn">Next</button>
+                        <button type="button" class="next-btn"  onclick=" quizFive()">Next</button>
                     </div>
 
                     <div class="step step-6">
@@ -84,7 +85,7 @@
                         </div>
 
                         <button type="button" class="previous-btn">Prev</button>
-                        <button type="button" class="next-btn">Next</button>
+                        <button type="button" class="next-btn"  onclick=" quizSix()">Next</button>
                     </div>
 
                     <div class="step step-7">
@@ -95,7 +96,7 @@
                         </div>
 
                         <button type="button" class="previous-btn">Prev</button>
-                        <button type="button" class="next-btn">Next</button>
+                        <button type="button" class="next-btn"  onclick=" quizSeven()">Next</button>
                     </div>
                     <div class="step step-final">
                         <div class="form-group">
@@ -108,7 +109,7 @@
                         </div>
 
                         <button type="button" class="previous-btn">Prev</button>
-                        <button type="button" class="submit-btn" onclick="getData()">Save</button>
+                        <button type="submit" class="submit-btn" onclick="getData()">Save</button>
                     </div>
                 </form>
             </div>
@@ -141,6 +142,7 @@
                 event.preventDefault();
                 window.location.href = "viewData.html"
             }
-        </script>  
+        </script>
+  
     </body>
 </html>
